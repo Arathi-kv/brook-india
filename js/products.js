@@ -33,91 +33,91 @@ image: 'images/products/sliver-lx-1-350x350.jpg'
 name: '2090 White / Black',
 cat: 'RO Purifier 15 LPH',
 price:16999.00,
-slug: 'silverlx',
+slug: '2090-white-black',
 image: 'images/products/2090-white-black-2-350x350.jpg'
 },
 {
 name: 'Apple Purex',
 cat: 'RO Purifier 15 LPH',
 price:17999.00,
-slug: 'silverlx',
+slug: 'apple-purex',
 image: 'images/products/apple-purex-350x350.jpg'
 },
 {
 name: 'Eliza',
 cat: 'RO Purifier 15 LPH',
 price:18999.00,
-slug: 'silverlx',
+slug: 'eliza',
 image: 'images/products/eliza-350x350.jpg'
 },
 {
 name: 'P90',
 cat: 'RO Purifier 15 LPH',
 price:18999.00,
-slug: 'silverlx',
+slug: 'p90',
 image: 'images/products/p90-1-350x350.jpg'
 },
 {
 name: 'Purosis',
 cat: 'RO Purifier 15 LPH',
 price:19999.00,
-slug: 'silverlx',
+slug: 'purosis',
 image: 'images/products/purosis-350x350.jpg'
 },
 {
 name: 'Chrome',
 cat: 'RO Premium',
 price:22999.00,
-slug: 'silverlx',
+slug: 'chrome',
 image: 'images/products/Chrome-350x350.png'
 },
 {
 name: 'Finpure',
 cat: 'RO Premium',
 price:22999.00,
-slug: 'silverlx',
+slug: 'finpure',
 image: 'images/products/Finpure-350x350.png'
 },
 {
 name: 'Innovica',
 cat: 'RO Premium',
 price:22999.00,
-slug: 'silverlx',
+slug: 'innovica',
 image: 'images/products/Innovica-350x350.png'
 },
 {
 name: 'Wave Hot & Cold',
 cat: 'RO Premium',
 price:26999.00,
-slug: 'silverlx',
+slug: 'wave-hot-cold',
 image: 'images/products/Wave-Hot-Cold-350x350.png'
 },
 {
 name: 'Under Cabin Basic',
 cat: 'RO Under Sink',
 price:16999.00,
-slug: 'silverlx',
+slug: 'under-cabin-basic',
 image: 'images/products/Under-Cabin-Basic-350x350.png'
 },
 {
 name: 'Nile',
 cat: 'RO Under Sink',
 price:18999.00,
-slug: 'silverlx',
+slug: 'nile',
 image: 'images/products/nile-350x350.png'
 },
 {
 name: 'Fighter under sink',
 cat: 'RO Under Sink',
 price:22999.00,
-slug: 'silverlx',
+slug: 'fighter-under-sink',
 image: 'images/products/fighter-under-sink-350x350.png'
 },
 {
 name: 'P90',
 cat: 'RO Under Sink',
 price:24999.00,
-slug: 'silverlx',
+slug: 'p90-ro-under-sink',
 image: 'images/products/P90-350x350.png'
 },
 
@@ -254,7 +254,7 @@ image: 'images/products/Hot-Cold-15-Ltr-350x350.jpg'
 name: 'RO SS MODEL 15 LPH',
 cat: 'SS Dispensers',
 price: 24950,
-slug: 'ro-ss-15',
+slug: 'ro-ss-model-15-lph',
 image: 'images/products/RO-SS-MODEL-350x350.jpg'
 },
 {
@@ -286,7 +286,7 @@ return `<article class="p-card">     <div class="p-img">       <img
         alt="${p.name}"
         loading="lazy"
         onerror="${fallback}"       >     </div>
-    ${showCat ? `<span class="p-cat">${p.cat}</span>`: ''}     <h3 class="p-name">${p.name}</h3>
+    ${showCat ? `<span class="p-cat">${p.cat}</span>`: ''}     <h3 class="p-name"><a class="stretched-link" href="product.html?id=${encodeURIComponent(p.slug)}">${p.name}</a></h3>
     ${p.price != null ?`<div class="p-price">${money(p.price)}</div>` : ''}
 
   </article>`;

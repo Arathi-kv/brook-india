@@ -378,3 +378,20 @@ flex: 0 0 auto;
   }
 }
 
+
+/* Single product page */
+.pd-img{border:1px solid var(--line);display:grid;place-items:center;padding:2rem;min-height:340px}
+.pd-img img{max-width:100%;max-height:460px;object-fit:contain}
+.pd-img .ph-icon{font-size:6rem;color:var(--teal)}
+.pd-cat{display:inline-block;font-size:.95rem;color:var(--text)}
+.pd-cat:hover{color:var(--teal)}
+.pd-name{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.25;margin:.2rem 0 .8rem}
+.pd-price{font-size:1.8rem;color:var(--navy);font-weight:500;margin-bottom:1rem}
+.pd-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn-pill-lg{border-radius:50px;padding:.6rem 1.8rem;font-weight:500}
+#related{margin-top:4rem}
+#related .section-h{margin-bottom:1.5rem}
+.pd-actions .btn-primary{background:var(--navy);border-color:var(--navy)}
+.pd-actions .btn-primary:hover{background:var(--teal);border-color:var(--teal)}
+.pd-actions .btn-outline-primary{color:var(--navy);border-color:var(--navy)}
+.pd-actions .btn-outline-primary:hover{background:var(--navy);color:#fff}
