@@ -8,9 +8,17 @@
   const $ = s => document.querySelector(s);
   const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-  const id = new URLSearchParams(location.search).get('id');
+  /* Clean URL pages (product/<slug>/) carry the slug on <body data-slug>.
+     Old links like product.html?id=<slug> still work and are sent to the clean URL. */
+  const fromQuery = new URLSearchParams(location.search).get('id');
+  const id = document.body.dataset.slug || fromQuery;
   const p = PRODUCTS.find(x => x.slug === id);
   const box = $('#product');
+
+  if (p && !document.body.dataset.slug) {
+    location.replace('product/' + encodeURIComponent(p.slug) + '/');
+    return;
+  }
 
   if (!p) {
     $('.crumbs').remove();

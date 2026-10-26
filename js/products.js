@@ -286,7 +286,7 @@ return `<article class="p-card">     <div class="p-img">       <img
         alt="${p.name}"
         loading="lazy"
         onerror="${fallback}"       >     </div>
-    ${showCat ? `<span class="p-cat">${p.cat}</span>`: ''}     <h3 class="p-name"><a class="stretched-link" href="product.html?id=${encodeURIComponent(p.slug)}">${p.name}</a></h3>
+    ${showCat ? `<span class="p-cat">${p.cat}</span>`: ''}     <h3 class="p-name"><a class="stretched-link" href="product/${encodeURIComponent(p.slug)}/">${p.name}</a></h3>
     ${p.price != null ?`<div class="p-price">${money(p.price)}</div>` : ''}
 
   </article>`;
