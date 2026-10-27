@@ -299,7 +299,7 @@
   const popupClose = document.getElementById('popupClose');
 
   // Open popup when an award or certificate is clicked
-  document.querySelectorAll('.scroll-row img').forEach(img => {
+  document.querySelectorAll('.doc-grid img').forEach(img => {
     img.addEventListener('click', () => {
       popupImage.src = img.src;
       popupImage.alt = img.alt;

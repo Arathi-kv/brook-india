@@ -240,52 +240,29 @@ a{text-decoration:none;color:var(--navy)}
   }
 }
 
-/* Reduce Awards image size */
-.col-lg-5 .scroll-row img {
-width: 150px;
-height: 150px;
-object-fit: contain;
+/* Awards and Certificates: separate sections, 3 columns each */
+.doc-section{margin-bottom:3rem}
+.doc-section h2{margin-bottom:1.5rem}
+.doc-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
-
-/* Keep images aligned in the scroll row */
-.col-lg-5 .scroll-row > div {
-flex: 0 0 auto;
+.doc-grid img{
+  display:block;
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  padding:8px;
+  background:#fff;
+  border:1px solid #e5e5e5;
+  border-radius:8px;
+  cursor:zoom-in;
+  transition:transform .25s ease, box-shadow .25s ease;
 }
-
-
-```css
-/* Awards and certificates */
-.scroll-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 5px 2px 15px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scroll-row > div {
-  flex: 0 0 auto;
-  width: 150px;
-}
-
-.scroll-row img {
-  display: block;
-  width: 100%;
-  height: 190px;
-  object-fit: contain;
-  padding: 5px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  cursor: zoom-in;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.scroll-row img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
-}
+.doc-grid img:hover{transform:scale(1.03);box-shadow:0 5px 18px rgba(0,0,0,.15)}
+@media (max-width:767.98px){.doc-grid{gap:12px}.doc-grid img{height:200px}}
+@media (max-width:479.98px){.doc-grid{grid-template-columns:repeat(2,1fr)}.doc-grid img{height:170px}}
 
 /* Full-screen image popup */
 .image-popup {
@@ -333,34 +310,14 @@ flex: 0 0 auto;
   background: #e8e8e8;
 }
 
-/* Tablet */
-@media (max-width: 991.98px) {
-  .scroll-row > div {
-    width: 140px;
-  }
-
-  .scroll-row img {
-    height: 180px;
-  }
-}
-
 /* Mobile */
 @media (max-width: 575.98px) {
   .row.g-5 {
     --bs-gutter-y: 2rem;
   }
 
-  .scroll-row {
-    gap: 12px;
-  }
 
-  .scroll-row > div {
-    width: 120px;
-  }
 
-  .scroll-row img {
-    height: 160px;
-  }
 
   .image-popup {
     padding: 50px 12px 12px;
